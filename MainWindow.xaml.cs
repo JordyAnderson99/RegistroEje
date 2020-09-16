@@ -41,11 +41,6 @@ namespace RegistroEje
                 this.actor = new Actores();
                 this.DataContext = this.actor;
             }
-            else if(cant==0){
-                MessageBox.Show("No se pudo Guardar!");
-                this.actor = new Actores();
-                this.DataContext = this.actor;
-            }
 
         }
 
