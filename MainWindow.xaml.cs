@@ -41,13 +41,25 @@ namespace RegistroEje
                 this.actor = new Actores();
                 this.DataContext = this.actor;
             }
-            else if(cant<0){
+            else if(cant==0){
                 MessageBox.Show("No se pudo Guardar!");
                 this.actor = new Actores();
                 this.DataContext = this.actor;
             }
-            
+
         }
+
+        public void BuscarButton_Click(object sender, RoutedEventArgs e){
+
+                Contexto context = new Contexto();
+                var found = context.Actores.Find(Convert.ToInt32(ActorIdTextBox.Text));
+
+                if(found != null){
+                    Actores actor = found;
+                    NombresTextBox.Text =actor.Nombres;
+                    SalarioIdTextBox.Text = Convert.ToString(actor.Salario);
+                }
+            }
     }
 
     

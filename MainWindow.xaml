@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
           <Grid>
-        <StackPanel><!--ActorId-->
+        <StackPanel>
+
+            <!--ActorId-->
             <Label Content = "ActorId:"/>
             <TextBox x:Name="ActorIdTextBox" Text="{Binding ActorId}"/>
             
@@ -19,7 +21,11 @@
             <Label Content="SalarioId:"/>
             <TextBox x:Name="SalarioIdTextBox" Text="{Binding SalarioAnual}"/>
 
+            <!--Guardar-->
             <Button x:Name="GuardarButton" Content="Guardar" Click="GuardarButton_Click"/>
+
+            <!--Buscar-->
+            <Button x:Name="BuscarButton" Content="Buscar" Click="BuscarButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
